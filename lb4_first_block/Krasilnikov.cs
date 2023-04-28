@@ -8,33 +8,44 @@ namespace lb4_krasilnikov_block1
 {
     public partial class Krasilnikov
     {
-
-        public static void ExtremeMinMax(ref int[] arr)
+        public static void ExtremeMinMax(ref int[] array)
         {
-            int min = arr[0];
-            int max = arr[0];
-            for (int i = 1; i < arr.Length; i++)
+
+            if (array.Length != 0)
             {
-                if (arr[i] < min)
+                int min = array[0];
+                int max = array[0];
+                for (int i = 1; i < array.Length; i++)
                 {
-                    min = arr[i];
+                    if (array[i] < min)
+                    {
+                        min = array[i];
+                    }
+
+                    if (array[i] > max)
+                    {
+                        max = array[i];
+                    }
                 }
 
-                if (arr[i] > max)
+                int[] newArr = new int[array.Length + 2];
+                newArr[0] = min;
+
+                for (int i = 0; i < array.Length; i++)
                 {
-                    max = arr[i];
+                    newArr[i + 1] = array[i];
                 }
+
+                newArr[newArr.Length - 1] = max;
+
+
+                array = newArr;
             }
-
-            int[] newArr = new int[arr.Length + 2];
-            newArr[0] = min;
-
-            for (int i = 0; i < arr.Length; i++)
+            else
             {
-                newArr[i + 1] = arr[i];
+                Console.WriteLine("Масив порожній, виконати дію неможливо...");
             }
-
-            newArr[newArr.Length - 1] = max;
+            
 
         }
     }
