@@ -35,11 +35,6 @@ namespace lb4_popilevych_block1
                     array = EraseB(array, i);
                 }
             }
-            foreach (var item in array)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
         }
     }
 }

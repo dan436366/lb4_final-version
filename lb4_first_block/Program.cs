@@ -51,7 +51,7 @@ namespace Lab4
         {
             if (array.Length == 0)
             {
-                Console.WriteLine("Знищено всi елементи масиву");
+                Console.WriteLine("Масив порожній");
             }
             else
             {
@@ -74,18 +74,18 @@ namespace Lab4
             {
                 switch (choiceOfStudent)
                 {
-                    case "красільніков":
+                    case "krasilnikov":
                         Krasilnikov.ExtremeMinMax(ref array);
                         Console.WriteLine("Результат:");
                         PrintArray(array);
                         break;
-                    case "попілевич":
+                    case "popilevych": 
                         Popilevych.DeleteOddElem(ref array);
                         Console.WriteLine("Результат:");
                         PrintArray(array);
                         break;
-                    case "зайчук":
-                        Lilia.Rishennya(ref array);
+                    case "zaichuk":
+                        Lilia.Block1(ref array);
                         Console.WriteLine("Результат:");
                         PrintArray(array);
                         break;
@@ -95,7 +95,7 @@ namespace Lab4
                 }
                 Console.WriteLine("Введiть прiзвище студента, варiант якого хочете виконати. Для завершення виконання варiанту програми введiть 0. ");
                 choiceOfStudent = Console.ReadLine().ToLower();
-                if (choiceOfStudent == "красільніков" || choiceOfStudent == "попілевич" || choiceOfStudent == "зайчук")
+                if (choiceOfStudent == "krasilnikov" || choiceOfStudent == "popilevych" || choiceOfStudent == "zaichuk")
                 {
                     Console.WriteLine("Бажаєте створити новий масив?(Так/Нi)");
                     string answer = Console.ReadLine().ToLower();
