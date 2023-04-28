@@ -16,7 +16,7 @@ namespace Lab4
             switch (choiceOfInput)
             {
                 case 1:
-                    InputRandom(countOfElements, ref array);
+                    InputRandom(countOfElements, ref array); // gg
                     Console.Write("Початковий масив: ");
                     for (int i = 0; i < countOfElements; i++)
                     {
