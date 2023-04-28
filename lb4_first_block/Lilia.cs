@@ -39,6 +39,8 @@ namespace lb4_zaichyk_block1
             }
 
             array = arrToPrint;
+
+		//
         }
     }
 }
